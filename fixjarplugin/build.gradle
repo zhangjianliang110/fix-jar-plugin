@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'java'
-//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.novoda.bintray-release'
 
 repositories {
     mavenCentral()
@@ -12,30 +12,40 @@ dependencies {
     compile localGroovy()
     compile 'com.android.tools.build:gradle:2.1.0'
     compile 'org.javassist:javassist:3.20.0-GA'
-//    compile 'org.codehaus.groovy:groovy-all:2.3.6'
 }
 
-//设置maven deployer
-uploadArchives {
-    configuration = configurations.archives
-    repositories {
-        mavenDeployer {
-            repository(url: uri('../autoToolRepo'))
-//            repository(url: rootProject.publishURL) {
-//                authentication(userName: rootProject.publishUserName, password: rootProject.publishUserPassword)
-                pom.groupId = 'com.stupidbird.fixjar'
-                pom.artifactId = 'fixjar'
-                pom.version = '1.0.0'
-//            }
-//            pom.whenConfigured { pom ->
-//                pom.dependencies.forEach { dep ->
-//                    if (dep.getVersion() == "unspecified") {
-//                        println("--modify the dependenies module in pom.xml--->>" + dep.getArtifactId())
-//                        dep.setGroupId(GROUP_ID)
-//                        dep.setVersion(VERSION)
-//                    }
-//                }
-//            }
-        }
-    }
+publish {
+    repoName = 'fix-jar-plugin'           //bintray仓库名
+    userOrg = 'zhangjianliang'           //bintray注册的用户名
+    groupId = 'com.stupidbird.fixjar'            //compile引用时的第1部分groupId
+    artifactId = 'fixjar'       //compile引用时的第2部分项目名
+    publishVersion = '1.0.0'       //compile引用时的第3部分版本号
+    desc = 'android编译时修复第三方库的bug'
+    website = 'https://github.com/zhangjianliang110/fix-jar-plugin'
 }
+
+
+//设置maven deployer
+//uploadArchives {
+//    configuration = configurations.archives
+//    repositories {
+//        mavenDeployer {
+//            repository(url: uri('../autoToolRepo'))
+////            repository(url: rootProject.publishURL) {
+////                authentication(userName: rootProject.publishUserName, password: rootProject.publishUserPassword)
+//                pom.groupId = 'com.stupidbird.fixjar'
+//                pom.artifactId = 'fixjar'
+//                pom.version = '1.0.0'
+////            }
+////            pom.whenConfigured { pom ->
+////                pom.dependencies.forEach { dep ->
+////                    if (dep.getVersion() == "unspecified") {
+////                        println("--modify the dependenies module in pom.xml--->>" + dep.getArtifactId())
+////                        dep.setGroupId(GROUP_ID)
+////                        dep.setVersion(VERSION)
+////                    }
+////                }
+////            }
+//        }
+//    }
+//}

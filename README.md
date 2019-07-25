@@ -44,7 +44,7 @@
 allprojects {
     repositories {
         ...
-        maven { url 'https://jitpack.io' }
+        maven {url 'https://bintray.com/zhangjianliang/fix-jar-plugin/'}
     }
 }
 </code></pre>
@@ -58,6 +58,8 @@ dependencies {
 <pre><code>
 apply plugin: 'com.stupidbird.fixjar.fixjarplugin'
 </code></pre>
+
+
 
 ## 注意事项
    1.参数、注入的代码，要带上包名，否则代码注入失败
