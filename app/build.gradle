@@ -27,4 +27,4 @@ dependencies {
 
     api 'com.google.code.gson:gson:2.8.0'
 }
-//apply plugin: 'com.stupidbird.fixjar.fixjarplugin'
+apply plugin: 'com.stupidbird.fixjar.fixjarplugin'
