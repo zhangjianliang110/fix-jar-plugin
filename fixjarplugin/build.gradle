@@ -1,0 +1,42 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'java'
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'com.android.tools.build:gradle:2.1.0'
+    compile 'org.javassist:javassist:3.20.0-GA'
+//    compile 'org.codehaus.groovy:groovy-all:2.3.6'
+}
+
+////设置maven deployer
+//uploadArchives {
+//    configuration = configurations.archives
+//    repositories {
+//        mavenDeployer {
+//            repository(url: uri('../autoToolRepo'))
+////            repository(url: rootProject.publishURL) {
+////                authentication(userName: rootProject.publishUserName, password: rootProject.publishUserPassword)
+//                pom.groupId = 'com.stupidbird.fixjar'
+//                pom.artifactId = 'fixjar'
+//                pom.version = '1.0.0'
+////            }
+////            pom.whenConfigured { pom ->
+////                pom.dependencies.forEach { dep ->
+////                    if (dep.getVersion() == "unspecified") {
+////                        println("--modify the dependenies module in pom.xml--->>" + dep.getArtifactId())
+////                        dep.setGroupId(GROUP_ID)
+////                        dep.setVersion(VERSION)
+////                    }
+////                }
+////            }
+//        }
+//    }
+//}

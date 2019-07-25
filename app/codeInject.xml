@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <switch>
+        <!--是否关闭插件功能-->
+        <enable>true</enable>
+        <!--是否保留注入代码后生成的临时代码文件-->
+        <keepTempFile>true</keepTempFile>
+    </switch>
+    <!--需要注入代码的类/方法/方法体-->
+    <fixjar>
+        <classInfo>
+            <name>com.google.gson.Gson</name>
+            <method>
+                <name>toJson</name>
+                <line>1</line>
+                <args>
+                    <argname>java.lang.Object</argname>
+                </args>
+                <code>java.lang.System.out.println("Gson.toJson(Object)注入代码成功");</code>
+            </method>
+        </classInfo>
+    </fixjar>
+</resources>

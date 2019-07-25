@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+//        maven {
+//            url uri("./autoToolRepo" )//多渠道本地打包插件，本地仓库
+//        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+//        classpath 'com.stupidbird.fixjar:fixjar:1.0.0'
+        //JitPack插件
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
