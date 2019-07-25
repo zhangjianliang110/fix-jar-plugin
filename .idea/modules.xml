@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akulaku-autotool-sample.iml" filepath="$PROJECT_DIR$/.idea/modules/akulaku-autotool-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fix-jar-plugin.iml" filepath="$PROJECT_DIR$/.idea/fix-jar-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fixjarplugin/fixjarplugin.iml" filepath="$PROJECT_DIR$/fixjarplugin/fixjarplugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multichannelplugin/multichannelplugin.iml" filepath="$PROJECT_DIR$/multichannelplugin/multichannelplugin.iml" />
+    </modules>
+  </component>
+</project>
