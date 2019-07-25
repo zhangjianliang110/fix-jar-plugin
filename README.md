@@ -4,7 +4,7 @@
 ### 使用方式
 #### 1. 在项目app module下创建配置文件  codeInject.xml
 #### 2. 在 codeInjet.xml 中，配置要修复的类名、方法名、方法参数、方法体、代码插入方法的行号
-
+<pre><code>
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <switch>
@@ -37,7 +37,7 @@
         </classInfo>
     </fixjar>
 </resources>
-
+</code></pre>
 ## 注意事项
    1.参数、注入的代码，要带上包名，否则代码注入失败
    2.当代码注入失败时，会继续使用修改前的代码
