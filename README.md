@@ -38,6 +38,27 @@
     </fixjar>
 </resources>
 ```
+#### 3.配置依赖
+1)项目根目录下 build.gradle 中 repositories 尾部添加：
+<pre><code>
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+</code></pre>
+2)根目录下 build.gradle 中  dependencies 中添加依赖：
+<pre><code>
+dependencies {
+    classpath 'com.stupidbird.fixjar:fixjar:1.0.0'
+}
+</code></pre>
+3)在 app module目录下 build.gradle 中，最底部，引入插件
+<pre><code>
+apply plugin: 'com.stupidbird.fixjar.fixjarplugin'
+</code></pre>
+
 ## 注意事项
    1.参数、注入的代码，要带上包名，否则代码注入失败
    2.当代码注入失败时，会继续使用修改前的代码
