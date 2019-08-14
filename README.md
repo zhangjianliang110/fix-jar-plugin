@@ -63,5 +63,5 @@ apply plugin: 'com.stupidbird.fixjar.fixjarplugin'
 
 ## 注意事项
    1.参数、注入的代码，要带上包名，否则代码注入失败  
-   2.当代码注入失败时，会继续使用修改前的代码
+   2.当代码注入失败时，会继续使用修改前的代码  
    我的博客：https://blog.csdn.net/u010577768/article/details/97292857
